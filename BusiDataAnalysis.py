@@ -45,18 +45,21 @@ data['ShipMode'].fillna(value=data.ShipMode.mode()[0],inplace=True)
 # print(data[data.Discount > 1]) ## 有数据
 # print(data[data.Discount < 0]) ## 无数据
 print(data[data['Discount'] > 1])
-
+# mark 把符合条件的数据置为指定数值
 data['Discount']=data.Discount.mask(data.Discount > 1,None)
 # print(data[data['Discount'].isna()])
 # 平均折扣
 discount_mean = data[data.Discount.notnull()].Discount.mean()
-print(discount_mean)
-data.fillna(value=data.Discount,)
+# print(discount_mean)
+# print(data[data['Discount'].isna()].Discount.size)
+data['Discount'].fillna(value=discount_mean,inplace=True)
+# print(data[data['Discount'].isna()].Discount.size)
+
 ## 1.7 清洗PostalCode列
-
-
+data.drop(columns=['PostalCode'],inplace=True)
+# print(data.info())
 #2.重复的数据
 #3.为空的数据
-
 ## 缺失数据 PostalCode ShipMode
+
 # 分析数据
