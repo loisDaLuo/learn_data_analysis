@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2342da0-88ce-4969-8abe-c9b449758a3b" name="Default" comment="222">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusiDataAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/BusiDataAnalysis.py" afterDir="false" />
-    </list>
+    <list default="true" id="b2342da0-88ce-4969-8abe-c9b449758a3b" name="Default" comment="222" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611636079532</updated>
-      <workItem from="1614172717855" duration="306000" />
+      <workItem from="1614172717855" duration="550000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1614172738333</created>
