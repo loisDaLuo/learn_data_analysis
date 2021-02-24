@@ -27,6 +27,8 @@ data.drop(index = data[data.interval < 0].index,inplace=True)
 # print(data.count())
 ## 1.4 清洗RowID 重复值
 
+###  1111
+
 # print(data['RowID'])
 # print(data.RowID.size)
 # print(data.RowID.unique().size)
