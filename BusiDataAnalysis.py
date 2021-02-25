@@ -63,3 +63,29 @@ data.drop(columns=['PostalCode'],inplace=True)
 ## 缺失数据 PostalCode ShipMode
 
 # 分析数据
+## 每年销售额增长情况
+data["Order-year"] = data['OrderDate'].dt.year
+data['Order-month'] = data['OrderDate'].dt.month
+data['quarter'] = data['OrderDate'].dt.to_period('Q')
+# print(data['quarter'])
+year_sales = data.groupby(by='Order-year').Sales.sum()
+## year-sales Series类型
+# print(year_sales)
+year_sale_12 = (year_sales[2012] - year_sales[2011])/year_sales[2011]
+year_sale_13 = (year_sales[2013] - year_sales[2012])/year_sales[2012]
+year_sale_14 = (year_sales[2014] - year_sales[2013])/year_sales[2013]
+# print(year_sale_12)
+# print(year_sale_13)
+# print(year_sale_14)
+
+sale_rate_12 = "%.2f%%" % (year_sale_12 * 100)
+sale_rate_13 = "%.2f%%" % (year_sale_13 * 100)
+sale_rate_14 = "%.2f%%" % (year_sale_14 * 100)
+print(sale_rate_12)
+print(sale_rate_13)
+print(sale_rate_14)
+## 各个地区分店销售额
+## 销售淡旺季分析
+## 新增用户
+## 用户RFM模型分析
+
